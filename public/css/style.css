@@ -276,6 +276,10 @@ header.home {
 	width: 80px;
 }
 
+.post-category {
+	font-weight: 700;
+}
+
 .author .author-image {
   float: left;
   margin-right: 20px;

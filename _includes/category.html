@@ -1,6 +1,6 @@
 <article class="post">
 	<header class="post-header home">
-		<div class="post-title">Category - <span id='category-name'></span></div>
+		<div class="post-title"><span id='category-name'></span></div>
 	</header>
 
 	<div class="post-content">
@@ -27,22 +27,27 @@
 	function removeCategory() {
 		if (window.location.hash) {
 			let hash = window.location.hash.substring(1);
+			// 해시가 있을 경우, 첫 글자를 대문자로 변환하여 나머지 문자열과 결합
 			$('#category-name').text(hash.substring(0, 1).toUpperCase() + hash.substring(1));
-			let category_class = '.post-category-' + hash;
-			let items = $('.post-list-item').each((i, e) => {
-				if (!$(e).hasClass('post-category-' + hash)) {
+		} else {
+			// 해시가 없을 경우, "All"을 텍스트로 설정
+			$('#category-name').text('All');
+		}
+
+		let category_class = '.post-category-' + (window.location.hash.substring(1) || 'all');
+		$('.post-list-item').each((i, e) => {
+			if (window.location.hash) {
+				if (!$(e).hasClass('post-category-' + window.location.hash.substring(1))) {
 					$(e).hide();
 				} else {
 					$(e).show();
 				}
-			});
-		}
+			} else {
+				// 해시 값이 없을 경우, 모든 항목을 표시
+				$(e).show();
+			}
+		});
 	}
-	$(window).on('hashchange', () => {
-		removeCategory();
-	});
-	$(document).ready(() => {
-		removeCategory();	
-	})
-	
+	$(window).on('hashchange', removeCategory);
+	$(document).ready(removeCategory);	
 </script>
