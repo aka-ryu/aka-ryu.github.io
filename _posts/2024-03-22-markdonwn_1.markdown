@@ -1,7 +1,7 @@
 ---
 layout: post
-title: post-sample
-category: update
+title: 마크다운 문법
+category: markdown
 ---
 # post-sample
 > Hello!
