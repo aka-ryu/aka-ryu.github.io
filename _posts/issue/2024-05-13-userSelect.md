@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유저 조회 이슈
+title: ISSUE - 유저 조회 이슈
 category: ISSUE
 ---
 

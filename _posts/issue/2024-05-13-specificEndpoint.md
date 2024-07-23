@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 특정 앤드포인트 이슈
+title: ISSUE - 특정 앤드포인트 이슈
 category: ISSUE
 ---
 

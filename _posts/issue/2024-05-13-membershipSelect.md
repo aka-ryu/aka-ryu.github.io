@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 회원권 조회 이슈
+title: ISSUE - 회원권 조회 이슈
 category: ISSUE
 ---
 
