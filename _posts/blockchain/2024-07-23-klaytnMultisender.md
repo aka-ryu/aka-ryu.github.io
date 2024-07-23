@@ -1,33 +1,27 @@
 ---
 layout: post
 title: BLOCKCHAIN - 클레이튼 멀티센더 구현
-category: BLOCKCHAIN
+categories: BLOCKCHAIN
 ---
 
-## 개요
+## 프로젝트 설명
 
-![scrennsh](/public/img/20240723_00.png)
-
-특정 로직 실행 중 unique constraint 제약조건 위반 에러가 발생
+합류 예정인 팀에서 이벤트로 참가자들에게 클레이튼 네트워크의 특정 코인을 나눠주어야 하는데 이때 참여자들 한명 한명에게 단일 트랜잭션을 보내는것 보다  
+csv 파일로 유저리스트를 올려 한번의 멀티샌딩 트랜잭션으로 수수료도 절감하고 편리함도 갖추기 위해 개발하였다.  
+(이더리움,바이낸스,폴리곤 등의 네트워크는 이미 다른곳에서 개발하여 이용할수 있는 곳이 많지만 클레이튼은 없다.)
 <br>
 
-## 원인
+## 프로젝트 구성
 
-교과서의 여러 과목중 학년,학기와 상관없이 국어과목은 모두 교육부 교과서를 공통으로 사용하게 되어있음.  
-혹시 특이사항이 발생하여 교육부 교과서가 아닌 다른교과서가 선택될걸 방지하기 위해 마지막에 교육부 교과서를 추가하는 로직이 존재.  
-![scrennsh](/public/img/20240723_01.png)
-<br><br>
+FE - react  
+HS - vercel  
+REPO - <a href="https://github.com/aka-ryu/multisender " target="_blank">https://github.com/aka-ryu/multisender</a>  
+domain - <a href="https://multisender-xodd.vercel.app/" target="_blank">https://multisender-xodd.vercel.app/</a>  
+외, 이용자는 크롬 익스텐션 kaikas 지갑을 설치해야 한다.
 
-해당 교과서 데이터들을 upsert 로 데이터베이스에 생성 혹은 변경 하는 과정을 거치는데  
-신규 생성의 경우 아래와 같은 현상을 겪는것으로 확인
-<br><br>
+## 프로젝트 설명
 
-1. 국어 -> 기존 데이터없음 -> 신규생성 -> 완료
-2. 수학 -> 기존 데이터없음 -> 신규생성 -> 완료
-3. 과학 -> 기존 데이터없음 -> 신규생성 -> 완료
-4. 과학 -> 기존 데이터없음 -> 신규생성 -> 완료
-5. 국어(추가된 항목) -> 기존 데이터없음 -> 신규생성 -> 1에서 만든것과 충돌  
-   ![scrennsh](/public/img/20240723_02.png)
+<img src="/public/img/20240723_03.png" alt="screenshot" width="600" height="400">
 
 ## 해결방안
 
