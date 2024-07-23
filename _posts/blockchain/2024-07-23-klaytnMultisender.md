@@ -21,8 +21,24 @@ domain - <a href="https://multisender-xodd.vercel.app/" target="_blank">https://
 
 ## 프로젝트 설명
 
-<img src="/public/img/20240723_03.png" alt="screenshot" width="600" height="400">
+<img src="/public/img/20240723_03.png" alt="screenshot" width="1000" height="600">
+<img src="/public/img/20240723_04.png" alt="screenshot" width="1000" height="600">
+<img src="/public/img/20240723_05.png" alt="screenshot" width="1000" height="600"><br>
+<img src="/public/img/20240723_06.png" alt="screenshot" >
+<img src="/public/img/20240723_07.png" alt="screenshot" ><br>
+<img src="/public/img/20240723_08.png" alt="screenshot" >
 
-## 해결방안
+## 프로젝트 과정, 특이사항
 
-마지막 국어 데이터를 추가하는 로직을 제거하고 국어 과목에 교육부가 아닌 다른 출판사의 책이 연결되지 않도록 다른부분을 점검
+개발하는데 까지는 총 3일정도 소요되었다.  
+블록체인 트랜잭션 관련 개발은 여러번 진행 했기 때문에 <a href="https://github.com/aka-ryu/ryu-s-wallet" target="_blank">(이전 블록체인 토이프로젝트 앱)</a>  
+블록체인과 해당 트랜잭션 관련 로직에서의 어려움은 크게 없었지만 개발중 이용했던 <a href="https://github.com/klaytn/caver-js" target="_blank">caver.js</a>(kaikas지갑 헬프모듈)가
+업데이트가 거의 중단된 상태라는 점, 기타 [react-script5, webpack5, polyfill](/react/2024/07/23/polyfill.html)
+<br><br>
+개발자체에는 크게 문제가 되거나 기술적 어려움이 있는부분이 없었지만 클레이튼 네트워크 자체가 많이 죽은건지
+로직이 네트워크 상태에 영향을 받는 부분이 존재하였고  
+페이지에서 잔액조회가 일시적으로 안되는등 kaikas 혹은 네트워크 상태에 따라 기능이 작동을 했다가 하지 않았다가 하는 특이사항이 보였고  
+그로인해 예상 수수료 예측에 대해서는 건너뛰고 진행하였다.  
+<br><br>
+급하게 진행한거라 트랜잭션 전파의 여러 단계마다의 에러핸들링 처리가 되어있지 않지만 이벤트 일정을 정상적으로 완료하였고  
+현재는 프라이빗 BO 에서 코드안정화, 기능추가, 메타마스크 방식 추가 등의 작업을 진행중이다.
