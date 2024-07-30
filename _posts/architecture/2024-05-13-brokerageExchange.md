@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Architecture - 코인 브로커리지 거래소 아키텍처
-category: architecture
+title: ARCHITECTURE - 코인 브로커리지 거래소 아키텍처
+category: ARCHITECTURE
 ---
 
 ![scrennsh](/public/img/20240726/20240726_00.png)
