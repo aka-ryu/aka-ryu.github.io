@@ -1,7 +1,7 @@
 ---
 layout: post
-title: nextjs - 이미지 사이즈, 확장자, 로딩속도
-categories: nextjs
+title: NEXTJS - 이미지 사이즈, 확장자, 로딩속도
+categories: NEXTJS
 ---
 
 # 개요
