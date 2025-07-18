@@ -31,6 +31,7 @@ category: NESTJS
 - AModule에 다른 export가 생겨도 영향을 받지 않음
 
 #### 요약
+
 | 항목 | 모듈 자체 export | 서비스만 export |
 |------|-------------------|------------------|
 | 의미 | 모듈이 export한 걸 통째로 전달 | 특정 provider만 전달 |

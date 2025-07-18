@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DEVOPS - 거래소 지갑 테이블 모델링
+title: DEVOPS - GitHub Actions + AWS Elastic Beanstalk CI/CD
 category: DEVOPS
 ---
 GitHub Actions와 AWS Elastic Beanstalk을 조합하면 꽤 단순하고 강력하게 CI/CD를 구성할수 있다.
