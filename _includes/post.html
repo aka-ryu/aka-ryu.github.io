@@ -1,15 +1,171 @@
-<article class="post">
-	<header class="post-header">
-		<div class="post-title"> 
-			{{ page.title | escape }}
-		</div>
-		<time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-			{%- assign date_format = site.date_forma | default: "%Y/%m/%d" -%}
-			{{ page.date | date: date_format }}
-		</time>		
-	</header>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 기존 스타일 유지하면서 테이블 스타일 추가 */
+        .post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+			margin-bottom: 200px;
+        }
+        
+        .post-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .post-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .post-date {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .post-content {
+            color: #444;
+        }
+        
+        .post-content h1, .post-content h2, .post-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .post-content h3 {
+            font-size: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 5px;
+        }
+        
+        .post-content p {
+            margin-bottom: 15px;
+        }
+        
+        .post-content code {
+            background-color: #f8f8f8;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+        
+        .post-content pre {
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        .post-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        /* 테이블 스타일 추가 */
+        .post-content table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .post-content th, 
+        .post-content td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .post-content th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .post-content tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .post-content tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .post-content td:first-child {
+            font-weight: 500;
+            color: #495057;
+        }
+        
+        /* 작은 화면에서 테이블 반응형 */
+        @media (max-width: 768px) {
+            .post-content table {
+                font-size: 12px;
+            }
+            
+            .post-content th, 
+            .post-content td {
+                padding: 8px 10px;
+            }
+        }
+        
+        /* 리스트 스타일 개선 */
+        .post-content ul, .post-content ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        .post-content li {
+            margin-bottom: 8px;
+        }
+        
+        /* 강조 텍스트 */
+        .post-content strong {
+            color: #333;
+            font-weight: 600;
+        }
+        
+        /* 구분선 */
+        .post-content hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 30px 0;
+        }
+        
+        /* 인용문 */
+        .post-content blockquote {
+            border-left: 4px solid #007bff;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <article class="post">
+        <header class="post-header">
+            <div class="post-title"> 
+                {{ page.title | escape }}
+            </div>
+            <time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.date_forma | default: "%Y/%m/%d" -%}
+                {{ page.date | date: date_format }}
+            </time>		
+        </header>
 
-	<div class="post-content">
-		{{ content }}
-	</div>
-</article>
+        <div class="post-content">
+            {{ content }}
+        </div>
+    </article>
+</body>
+</html>
