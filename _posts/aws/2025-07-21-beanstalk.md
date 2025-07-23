@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BLOCKCHAIN - 클레이튼 멀티센더 구현
-categories: BLOCKCHAIN
+title: AWS - Beanstalk
+categories: AWS
 ---
 AWS Elastic Beanstalk은 애플리케이션을 빠르게 배포할 수 있는 PaaS 서비스다. 코드를 올리기만 하면 EC2, S3, Auto Scaling, Load Balancer, CloudWatch 등을 자동으로 설정해준다. 여기선 Beanstalk을 왜 쓰는지, 어떤 장점과 단점이 있는지 실제 사용 입장에서 정리해봤다.
 
