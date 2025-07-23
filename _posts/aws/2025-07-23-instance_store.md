@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AWS - Hibernate 절전모드
+title: AWS - 인스턴스 스토어
 categories: AWS
 ---
 ## EC2 인스턴스 스토어란?
